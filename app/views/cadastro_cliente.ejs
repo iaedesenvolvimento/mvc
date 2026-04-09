@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Cadastro de Clientes</title>
+</head>
+<body>
+
+    <header>
+        <nav id="menu">
+            <a href="/">Home</a> | 
+            <a href="/validaCPF">Verifica CPF</a> | 
+            <a href="/confirmou">Confirma Senha</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="titulo">
+            <h1>Cadastro de Clientes</h1>
+        </section>
+
+        <section id="caixa_formulario">
+            <form action="/add_cliente" method="post">
+                
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" size="30" maxlength="70" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" size="11" maxlength="11" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" size="8" maxlength="8" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmasenha">Confirma Senha</label>
+                    <input type="password" name="confirmasenha" id="confirmasenha" size="8" maxlength="8" required>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+                
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

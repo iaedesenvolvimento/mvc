@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Dados do Formulário</title>
+</head>
+<body>
+    <header>
+        <nav id="menu">
+            <a href="/">Home</a> | <a href="/validaCPF">Verifica CPF</a> | <a href="/confirmou">Confirma Senha</a>
+        </nav>
+    </header>
+    <section>
+        <h1 id="titulo">Dados do Formulário</h1>
+    </section>
+
+    <section id="tabela_clientes">
+        <section class="container_clientes">
+            Nome do Cliente:
+        </section>
+        <section class="container_clientes">
+            <%= nome_cliente %> <!-- Nome do cliente vindo do formulário Cadastro de Clientes -->
+        </section>
+        <section class="container_clientes">
+            CPF do Cliente:
+        </section>
+        <section class="container_clientes">
+            <%= cpf_cliente %> <!-- CPF do cliente vindo do formulário Cadastro de Clientes -->
+        </section>
+        <section class="container_clientes">
+            Senha do Cliente:
+        </section>
+        <section class="container_clientes">
+            <%= senha_cliente %> <!-- Senha vinda do formulário -->
+        </section>
+        <section class="container_clientes">
+            Confirma Senha do Cliente: <!-- Senha vinda do formulário -->
+        </section>
+        <section class="container_clientes">
+            <%= confirmasenha_cliente %> <!-- Senha vinda do formulário -->
+        </section>
+    </section>
+</body>
+</html>

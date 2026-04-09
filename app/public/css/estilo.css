@@ -1,0 +1,88 @@
+body{
+    background-color: #ee6b51;
+}
+
+#titulo {
+    text-align: center;
+    color: #fff;
+    font-family: "Comic Sans MS";
+    font-size: 32px
+}
+
+#container {
+    margin: auto;
+    width: 20%;
+    border: 1px solid #e5f6cf;
+    padding: 10px;
+    text-align: center 
+}
+
+p {
+    font-family: arial;
+    font-size: 16px
+}
+
+#menu {
+    text-align: center;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a {
+    font-family: arial;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none
+}
+
+#img {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#caixa_formulario{
+    margin: auto;
+    width: 30%;
+    font-family: arial;
+    font-size: 1rem;
+}
+
+#caixa_formulario label {
+    display: block;
+    margin: 10px 0px 0px 0px;
+}
+
+input {
+    background-color: #fff;
+    font-family: arial;
+    border-radius: 7px;
+    color: #333;
+}
+
+button {
+    background-color: #000;
+    font-family: verdana;
+    border-radius: 7px;
+    font-size: 0.8em;
+    color: #fff;
+    cursor: pointer;
+}
+
+#tabela_clientes {
+    margin: auto;
+    width: 20%;
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 2px solid #8d0404;
+    border-radius: 10px;
+}
+
+.container_clientes {
+    width: 100%;
+    padding: 8px;
+    font-family: verdana;
+    font-size: 1em;
+}
+
+
