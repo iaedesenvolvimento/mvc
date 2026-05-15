@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de CPF</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        form { margin-bottom: 20px; }
+        .sucesso { color: green; font-weight: bold; }
+        .erro { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Verificar validade do CPF</h1>
+    
+    <!-- Formulário para envio -->
+    <form action="/validarCPF" method="POST">
+        <label for="cpf">Digite o CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+        <button type="submit">Validar</button>
+    </form>
+
+    <!-- Verificação de segurança para evitar erro de variável indefinida -->
+    <% if (typeof resultado !== 'undefined' && resultado !== null) { %>
+        <div id="feedback">
+            <p>Resultado: 
+                <span class="<%= resultado.valido ? 'sucesso' : 'erro' %>">
+                    <%= resultado.mensagem %>
+                </span>
+            </p>
+        </div>
+    <% } %>
+
+    <script>
+        // Pequeno script para ajudar o usuário a digitar apenas números no campo
+        document.getElementById('cpf').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.slice(0, 11);
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>

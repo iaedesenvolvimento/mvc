@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Confirma Senha</title>
+</head>
+<body>
+    <section id="caixa_formulario">
+        <form action="/vamospfc" method="POST" onsubmit="return verificaConfirmaSenha()">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" size="10" maxlength="6" required>
+            <label for="confirmasenha">Confirma Senha</label>
+            <input type="password" name="confirmasenha" id="confirmasenha" size="10" maxlength="6" required>
+            <label for=""></label>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p id="mensagem"></p>
+    </section>
+</body>
+</html>
