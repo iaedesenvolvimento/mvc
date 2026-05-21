@@ -8,6 +8,29 @@ const conexao = mysql.createConnection({
     port: "3306"              // Via de acesso de comunicacao entre a aplicacao (app) e SGBD MySQL Workbench
 })
 
+const conectarBanco = new Promise((resolve, reject) => {
+
+    let deuCerto = true;   // let é um comando para criar variável que pode alterar valor durante a execução do script.
+
+    if (deuCerto) {
+        resolve("MySql conectado com sucesso!");
+    } else {
+        reject("Erro ao conectar no Banco de Dados MySql:");
+    }
+
+});
+
+// Consumindo a Promise
+conectarBanco
+    .then((resultado) => {
+        console.log(resultado);    // Escreve no terminal quando a promessa deu certo
+    })
+    .catch((erro) => {
+        console.log(erro);         // Escreve no terminal quando a promessa deu errado 
+    })
+
+/*
+    
 conexao.connect((erro) => {
     if(erro) {
         console.log("Erro ao conectar no Banco de Dados MySql")
@@ -15,5 +38,6 @@ conexao.connect((erro) => {
         console.log("MySql conectado com sucesso")
     }
 }) 
+*/
 
 module.exports = conexao
