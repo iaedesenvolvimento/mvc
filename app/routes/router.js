@@ -7,6 +7,7 @@ const cadClienteController = require("../controllers/cadClienteController")
 const addClienteController = require("../controllers/addClienteController")
 const confirmaSenhaController = require("../controllers/confirmaSenhaController") // Ajuste o caminho se necessário
 const vamospfcController = require("../controllers/vamospfcController")
+const clienteController = require("../controllers/clienteController")
 
 
 // Rota da página inicial
@@ -27,5 +28,7 @@ rota.post('/vamospfc', vamospfcController.vamospfcAgradece)
 // --- CORREÇÃO AQUI: Use 'rota', não 'router' ---
 rota.get('/validarCPF', cpfController.exibirPagina);
 rota.post('/validarCPF', cpfController.processarValidacao);
+
+rota.get('/clientes', clienteController.listar)  // define a rota da página que resgata os dados de Clientes do Banco de Dados.
 
 module.exports = rota

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/estilo_lista.css" type="text/css">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Clientes</h1>
+    </header>
+
+    
+
+    <% clientes.forEach(function(cliente){ %>
+        <section>
+
+        </section>
+        <form>
+
+            <label>Nome</label>
+            <input type="text" value="<%= cliente.NOME %>">
+
+            <label>CPF</label>
+            <input type="text" value="<%= cliente.CPF %>">
+
+            <label>Senha</label>
+            <input type="text" value="<%= cliente.SENHA %>">
+
+            <label>Confirma Senha</label>
+            <input type="text" value="<%= cliente.CONFIRMA_SENHA %>">
+
+        </form>
+
+        <% }) %>
+</body>
+
+</html>
